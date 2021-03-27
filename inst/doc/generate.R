@@ -21,7 +21,7 @@ field_subjects <- tibble(
 )
 
 ## -----------------------------------------------------------------------------
-field_vsr <- data.frame(
+field_vsr <- tibble(
   field = "my_vsr",                 
   type = "EfficacyParameterSet",      
   set = "resp2",                      

@@ -1,3 +1,7 @@
+# Version 0.1.1
+
+* Remove LazyData in the DESCRIPTION to address CRAN check notes.
+
 # Version 0.1.0
 
 * Add new function `read_facts()` to read arbitrary XML fields of FACTS files.
