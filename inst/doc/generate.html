@@ -405,7 +405,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>We put the fields together in a single data frame.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>fields &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(field_subjects, field_vsr)</span>
 <span id="cb5-2"><a href="#cb5-2"></a>fields</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; # A tibble: 2 x 4</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; # A tibble: 2 × 4</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt;   field       type                 set     property              </span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;                &lt;chr&gt;   &lt;chr&gt;                 </span></span>
 <span id="cb5-6"><a href="#cb5-6"></a><span class="co">#&gt; 1 my_subjects NucleusParameterSet  nucleus max_subjects          </span></span>
@@ -417,7 +417,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb6-4"><a href="#cb6-4"></a>  <span class="dt">my_vsr =</span> <span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">15</span>, <span class="dv">50</span>), <span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">75</span>))</span>
 <span id="cb6-5"><a href="#cb6-5"></a>)</span>
 <span id="cb6-6"><a href="#cb6-6"></a>values</span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#&gt; # A tibble: 2 x 3</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#&gt; # A tibble: 2 × 3</span></span>
 <span id="cb6-8"><a href="#cb6-8"></a><span class="co">#&gt;   facts_file   my_subjects my_vsr   </span></span>
 <span id="cb6-9"><a href="#cb6-9"></a><span class="co">#&gt;   &lt;chr&gt;              &lt;dbl&gt; &lt;list&gt;   </span></span>
 <span id="cb6-10"><a href="#cb6-10"></a><span class="co">#&gt; 1 contin.facts        1000 &lt;dbl [2]&gt;</span></span>
@@ -490,19 +490,19 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li>Use <code>read_facts()</code> to inspect the settings that should be modified.</li>
 </ol>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">read_facts</span>(<span class="dt">facts_file =</span> facts_file, <span class="dt">fields =</span> fields)</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="co">#&gt; # A tibble: 1 x 3</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="co">#&gt;   facts_file   my_subjects my_vsr   </span></span>
 <span id="cb11-4"><a href="#cb11-4"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;       &lt;list&gt;   </span></span>
 <span id="cb11-5"><a href="#cb11-5"></a><span class="co">#&gt; 1 contin.facts 300         &lt;chr [2]&gt;</span></span>
 <span id="cb11-6"><a href="#cb11-6"></a></span>
 <span id="cb11-7"><a href="#cb11-7"></a><span class="kw">read_facts</span>(<span class="dt">facts_file =</span> <span class="st">&quot;small.facts&quot;</span>, <span class="dt">fields =</span> fields)</span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#&gt; # A tibble: 1 x 3</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
 <span id="cb11-9"><a href="#cb11-9"></a><span class="co">#&gt;   facts_file  my_subjects my_vsr   </span></span>
 <span id="cb11-10"><a href="#cb11-10"></a><span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;       &lt;list&gt;   </span></span>
 <span id="cb11-11"><a href="#cb11-11"></a><span class="co">#&gt; 1 small.facts 1000        &lt;chr [2]&gt;</span></span>
 <span id="cb11-12"><a href="#cb11-12"></a></span>
 <span id="cb11-13"><a href="#cb11-13"></a><span class="kw">read_facts</span>(<span class="dt">facts_file =</span> <span class="st">&quot;large.facts&quot;</span>, <span class="dt">fields =</span> fields)</span>
-<span id="cb11-14"><a href="#cb11-14"></a><span class="co">#&gt; # A tibble: 1 x 3</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
 <span id="cb11-15"><a href="#cb11-15"></a><span class="co">#&gt;   facts_file  my_subjects my_vsr   </span></span>
 <span id="cb11-16"><a href="#cb11-16"></a><span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;       &lt;list&gt;   </span></span>
 <span id="cb11-17"><a href="#cb11-17"></a><span class="co">#&gt; 1 large.facts 2000        &lt;chr [2]&gt;</span></span></code></pre></div>

@@ -398,11 +398,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h1>Connecting <code>rfacts</code> to the system dependencies</h1>
 <p>To allow <code>rfacts</code> to find the CSV file above, you must set the <code>RFACTS_PATHS</code> environment variable. For a single R session, you can do this with <code>Sys.setenv(RFACTS_PATHS = &quot;path/to/file.csv&quot;)</code>. To set <code>RFACTS_PATHS</code> permanently for all future sessions, open your <code>.Renviron</code> file with <code>usethis::edit_r_environ()</code> and add a line with <code>RFACTS_PATHS=path/to/file.csv</code>. Then, restart R so the changes take effect. Verify that you did this correctly by checking the value of the environment variable.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">Sys.getenv</span>(<span class="st">&quot;RFACTS_PATHS&quot;</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#&gt; [1] &quot;/private/var/folders/k3/q1f45fsn4_13jbn0742d4zj40000gn/T/RtmpPLHdy3/Rinsta23c6b13d1a0/rfacts/example_paths.csv&quot;</span></span></code></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#&gt; [1] &quot;/private/var/folders/k3/q1f45fsn4_13jbn0742d4zj40000gn/T/Rtmp3Mwarw/Rinst15a5a391b79be/rfacts/example_paths.csv&quot;</span></span></code></pre></div>
 <p>Check the system dependency information with <code>rfacts_paths()</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(rfacts)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="kw">rfacts_paths</span>()</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; # A tibble: 22 x 6</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; # A tibble: 22 × 6</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt;    executable_type facts_version path         engine_name param_set   param_type</span></span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;     </span></span>
 <span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt;  1 mono            6.2.4         /PATH/TO/mo… &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;      </span></span>
@@ -418,7 +418,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb3-16"><a href="#cb3-16"></a><span class="co">#&gt; # … with 12 more rows</span></span></code></pre></div>
 <p>Use <code>rfacts_sitrep()</code> to verify that all the executables exist and are indeed executable. This vignette uses toy paths that do not actually exist. In your setup, if <code>exists</code> and <code>is_executable</code> are all <code>TRUE</code>, then your setup is configured correctly.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">rfacts_sitrep</span>()</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; # A tibble: 22 x 5</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; # A tibble: 22 × 5</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt;    executable_type facts_version exists is_executable path                      </span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;         &lt;lgl&gt;  &lt;lgl&gt;         &lt;chr&gt;                     </span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt;  1 mono            6.2.4         FALSE  FALSE         /PATH/TO/mono/mono-5.20.1…</span></span>
