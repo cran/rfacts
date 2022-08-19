@@ -9,7 +9,7 @@ Description: The 'rfacts' package is an R interface to the
   they enhance computational reproducibility.
   For more information on 'FACTS' itself,
   please visit <https://www.berryconsultants.com/software/>.
-Version: 0.2.0
+Version: 0.2.1
 License: MIT + file LICENSE
 URL: https://elilillyco.github.io/rfacts/,
         https://github.com/EliLillyCo/rfacts
@@ -37,12 +37,12 @@ VignetteBuilder: knitr
 Config/testthat/edition: 3
 Language: en-US
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 NeedsCompilation: no
-Packaged: 2022-01-04 21:11:37 UTC; c240390
+Packaged: 2022-08-19 12:53:54 UTC; landau
 Author: William Michael Landau [aut, cre]
     (<https://orcid.org/0000-0003-1878-3253>),
   Eli Lilly and Company [cph]
 Maintainer: William Michael Landau <will.landau@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-01-04 21:40:02 UTC
+Date/Publication: 2022-08-19 13:10:02 UTC
